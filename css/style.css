@@ -1,0 +1,636 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #3f5d45;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: Microsoft JhengHei;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  color: #3f5d45;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.hanIcon {
+  display: none;
+  cursor: pointer;
+}
+
+.header h1 a {
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/a3ed9441c2522e2b8edb35a9847121eb3e6af16e/student-week1/logo-all-dark.svg);
+  width: 211px;
+  height: 40px;
+  display: block;
+  background-repeat: no-repeat;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu {
+  /* background-color: palegoldenrod; */
+  width: 33%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li a {
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* ----------header斷點---------- */
+
+/* ----1024px---- */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+}
+/* ----1024px---- */
+
+/* ----ipad---- */
+@media (max-width: 768px) {
+  .container {
+    max-width: 85%;
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+
+  .hanIcon {
+    display: block;
+  }
+
+  .header h1 a {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logotype-sm-dark.svg);
+  }
+
+  .menu {
+    width: auto;
+  }
+
+  .menuText {
+    display: none;
+  }
+}
+/* ----平板---- */
+
+/* ----手機---- */
+@media (max-width: 767px) {
+  .container {
+    max-width: 767px;
+  }
+
+  .header {
+    justify-content: space-around;
+  }
+
+  .header h1 a {
+    width: 117px;
+    height: 17px;
+  }
+}
+/* ----手機---- */
+
+/* ----------header斷點---------- */
+.banner {
+  margin-bottom: 60px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.type {
+  width: 33%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 33px;
+  /* margin-right: 2%; */
+}
+
+.type h2 {
+  background-color: #3f5d45;
+  color: #eaf0ed;
+  padding: 16px 0;
+}
+
+.typeList li {
+  border: 1px solid #eaf0ed;
+  margin: -1px 0px 0px 0px;
+}
+
+.typeList li a {
+  display: block;
+  padding: 16px 0;
+  transition: 0.2s;
+}
+
+.typeList li a:hover {
+  background-color: #eaf0ed;
+}
+
+.productList {
+  text-align: center;
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.productList-item {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  margin-bottom: 20px;
+  /* margin-right: 2%; */
+}
+
+.product-img {
+  position: relative;
+  margin: 0 auto;
+}
+
+.product-favor {
+  position: absolute;
+  top: 19px;
+  right: 22px;
+}
+
+.product-today {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  writing-mode: vertical-rl;
+  letter-spacing: 4px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #eaf0ed;
+  background-color: #3f5d45;
+  padding: 12px 10px;
+}
+
+.product-desc {
+  display: flex;
+  border-right: 1px solid #eaf0ed;
+  border-left: 1px solid #eaf0ed;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.product-title {
+  padding: 14px 0px;
+  width: 50%;
+  border-right: 1px solid #eaf0ed;
+  font-weight: normal;
+}
+
+.product-price {
+  text-align: center;
+  width: 50%;
+  padding: 14px 0;
+}
+
+.shopping-cart {
+  width: 100%;
+  font-size: 24px;
+  line-height: 33px;
+  display: block;
+  padding: 16px 0;
+  background-color: #eaf0ed;
+  transition: 0.2s;
+}
+
+.shopping-cart:hover {
+  color: #eaf0ed;
+  background-color: #3f5d45;
+}
+
+.page {
+  width: 100%;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.page li {
+  width: 60px;
+  border: 1px solid #eaf0ed;
+  margin: 0px 0px -1px -1px;
+  text-align: center;
+}
+.num a {
+  display: block;
+  padding: 16px 0;
+  transition: 0.2s;
+}
+
+.num a:hover {
+  background-color: #3f5d45;
+  color: #eaf0ed;
+}
+
+.arrow img {
+  padding: 18px;
+}
+
+/* ----------banner content斷點---------- */
+/* ----ipad---- */
+@media (max-width: 768px) {
+  .banner {
+    margin-bottom: 40px;
+  }
+
+  .type {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .typeList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .typeList li {
+    width: 50%;
+    margin: 0;
+  }
+
+  .productList {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  .productList-item {
+    width: 46%;
+    margin-bottom: 30px;
+  }
+
+  .page {
+    justify-content: center;
+  }
+}
+/* ----ipad---- */
+
+/* ----手機---- */
+@media (max-width: 767px) {
+  .banner {
+    margin-bottom: 0;
+  }
+
+  .type {
+    margin-bottom: 30px;
+  }
+
+  .typeList {
+    flex-direction: column;
+  }
+
+  .typeList li {
+    width: 100%;
+  }
+
+  .productList {
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .productList-item {
+    width: 72%;
+  }
+
+  .page {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}
+/* ----手機---- */
+
+/* ----------banner content斷點---------- */
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subscribe {
+  width: 100%;
+  background-color: #3f5d45;
+  color: #eaf0ed;
+  padding: 38px 0;
+}
+
+.subscribe form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.notify {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notify img {
+  margin-right: 20px;
+}
+
+.notify p {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.mailto {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+
+.mailIcon {
+  display: block;
+  background-color: #eaf0ed;
+  padding: 20px 20px;
+}
+
+.inputEmail {
+  background-color: #eaf0ed;
+  border: none;
+  width: 50%;
+}
+
+.arrowIcon {
+  display: block;
+  background-color: #ffe180;
+  padding: 20px 24px;
+  transition: 0.2s;
+}
+
+.arrowIcon:hover {
+  background-color: papayawhip;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  background-color: #eaf0ed;
+  color: #3f5d45;
+}
+
+.info-logo {
+  width: 33%;
+  padding: 39px 0 30px 0px;
+}
+
+.info-sweetaste {
+  /* width: 70%; */
+  width: 171px;
+  margin-bottom: 115px;
+}
+
+.info-contact {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+.info-socialIcon {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.info-socialIcon li img {
+  width: 32px;
+  margin-right: 8px;
+}
+
+.copyRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  font-family: "新細明體";
+}
+
+.goodDay {
+  writing-mode: vertical-lr;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 40px;
+  text-indent: 10px;
+  letter-spacing: 6px;
+}
+
+/* ----------footer斷點---------- */
+/* ----ipad---- */
+@media (max-width: 768px) {
+  .subscribe form {
+    flex-wrap: wrap;
+  }
+  .notify {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .mailto {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .inputEmail {
+    width: 65%;
+  }
+}
+/* ----ipad---- */
+
+/* ----手機---- */
+@media (max-width: 767px) {
+  .inputEmail {
+    width: 48%;
+  }
+  .goodDay {
+    display: none;
+  }
+  .info {
+    flex-direction: column;
+    padding-left: 30px;
+  }
+  .info-sweetaste {
+    margin-bottom: 40px;
+  }
+  .info-logo {
+    width: 100%;
+  }
+  .copyRight {
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+}
+
+/* ----手機---- */
+
+/* ----------footer斷點---------- */
